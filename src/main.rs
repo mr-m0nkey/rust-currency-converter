@@ -49,6 +49,7 @@ fn main() {
 
 
 
+
 }
 
 fn get_currency() -> String {
@@ -60,6 +61,19 @@ fn get_currency() -> String {
 
     input.trim().to_string()
 }
+
+
+fn get_exchenge_amount() -> f32 {
+    let mut input = String::new();
+
+    io::stdin()
+        .read_line(&mut input)
+        .expect("Invalid input");
+
+    input.trim().parse::<f32>().expect("That's not a number")
+}
+
+
 
 fn initialize_currencies() -> CurrencyWrapper {
     println!("Initializing currencies...");
