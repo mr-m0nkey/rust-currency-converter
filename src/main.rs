@@ -44,6 +44,8 @@ fn main() {
 
     }
 
+    //TODO retrieve amount to exchange
+
 
 
 
