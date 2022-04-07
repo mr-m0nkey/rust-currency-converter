@@ -38,14 +38,17 @@ fn main() {
     if let Some(destination_currency_map) = destination_currency_map_option {
         if let Some(exchange_rate) = destination_currency_map.get(&destination_currency) {
             println!("Exchange rate is {}", &exchange_rate);
+            println!("How much do you want to exchange?");
+            let exchage_amount = get_exchenge_amount();
+            println!("{} {} will give get you {} {}", &exchage_amount, &source_currency, exchage_amount * exchange_rate, &destination_currency);
         } else {
             panic!("No exchange rate data for {} to {}", &source_currency, &destination_currency);
         }
 
     }
 
-    //TODO retrieve amount to exchange
 
+    
 
 
 
